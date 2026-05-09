@@ -1,0 +1,44 @@
+@import url('https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;500;600;700&display=swap');
+
+@import "tailwindcss";
+@config "../tailwind.config.js";
+
+@layer base {
+  body {
+    @apply bg-deep-space text-white font-sans antialiased;
+    overflow-x: hidden;
+  }
+}
+
+@layer utilities {
+  .glassmorphism {
+    @apply bg-white/5 backdrop-blur-md border border-white/10 shadow-[0_4px_30px_rgba(0,0,0,0.1)];
+  }
+  
+  .glassmorphism-hover {
+    @apply hover:bg-white/10 hover:border-neon-cyan/50 hover:shadow-[0_0_20px_rgba(0,243,255,0.3)] transition-all duration-300;
+  }
+  
+  .text-glow-cyan {
+    text-shadow: 0 0 10px #00f3ff, 0 0 20px #00f3ff;
+  }
+
+  .text-glow-purple {
+    text-shadow: 0 0 10px #b026ff, 0 0 20px #b026ff;
+  }
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+::-webkit-scrollbar-track {
+  background: #050B14;
+}
+::-webkit-scrollbar-thumb {
+  background: #00f3ff;
+  border-radius: 4px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #b026ff;
+}
